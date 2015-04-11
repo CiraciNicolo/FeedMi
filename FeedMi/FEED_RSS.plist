@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>NAME</key>
+		<string>Notizie in homepage</string>
+		<key>TYPE</key>
+		<integer>0</integer>
+		<key>URL</key>
+		<string>http://www.unimi.it/xml/news.xml</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Avvisi in homepage</string>
+		<key>TYPE</key>
+		<integer>0</integer>
+		<key>URL</key>
+		<string>http://www.unimi.it/xml/avvisi.xml</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Cuminicati stampa - Ufficio stampa</string>
+		<key>TYPE</key>
+		<integer>0</integer>
+		<key>URL</key>
+		<string>http://www.unimi.it/xml/ufficiostampa.xml</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Beni culturali e ambientali - Notizie)</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.bac.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p174401</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Bioscienze - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dbs.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p59401</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Bioscienze - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dbs.unimi.it/ecm/home/aggiornamenti-e-archivi/content/rss/UNIMIDIRE-15758</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Biotecnologie Mediche e Medicina Traslazionale</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.biometra.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p247501</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Chimica</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.chimica.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p178601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Diritto Privato e Storia del Diritto</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dpsd.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p97301</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Diritto pubblico italiano e sovranazionale - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dirittopubblico.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p389501</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Diritto pubblico italiano e sovranazionale - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dirittopubblico.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-3_p389501</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Economia, Management e Metodi Quantitativi - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.demm.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p100601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Economia, Management e Metodi Quantitativi - Avvisi Via Conservatorio 7</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.demm.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-4_p100601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Economia, Management e Metodi Quantitativi - Avvisi Via Celoria 2</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.demm.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-3_p100601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Filosofia</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dipafilo.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p405901</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Fisica - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.fisica.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p62701</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Fisica - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.fisica.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-6952</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Fisiopatologia medico-chirurgica e dei trapianti (DEPT) - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dept.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p393601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Fisiopatologia medico-chirurgica e dei trapianti (DEPT) - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dept.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-3_p393601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Informatica - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.di.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p25201</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Informatica - Avvisi Milano</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.ccdinfmi.unimi.it/it/avvisi.rss</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Informatica - Avvisi Crema</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.ccdinfcr.unimi.it/it/avvisi.rss</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Informatica - Avvisi Tecnologia dei Beni Culturali</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.tecnobenicult.unimi.it/it/avvisi.rss</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Lingue e letterature straniere</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.lingue.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p182801</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Matematica &quot;Federigo Enriques&quot;</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.matematica.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p66001</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze Agrarie e Ambientali - Produzione, Territorio, Agroenergia</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.disaa.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p52801</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze biomediche e cliniche &apos;Luigi Sacco&apos; - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dibic.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p238901</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze biomediche e cliniche &apos;Luigi Sacco&apos; - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dibic.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-8376</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze biomediche per la salute</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.scibis.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p234601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze Biomediche, Chirurgiche e Odontoiatriche</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.disbioc.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p397701</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze cliniche  e di comunità</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.discco.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p401801</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze della Terra &quot;Ardito Desio&quot; - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dipterra.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p414101</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze della Terra &quot;Ardito Desio&quot; - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.dipterra.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-gli-avvisi/content/rss/UNIMIDIRE-11553</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze della Mediazione Linguistica e di Studi Interculturali</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.mediazione.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p187001</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze della Salute</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.diss.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p243201</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze Farmaceutiche - DISFARM</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.disfarm.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p69301</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze Farmacologiche e Biomolecolari - Notizie</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.disfeb.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p72601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze Farmacologiche e Biomolecolari - Avvisi</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.disfeb.unimi.it/ecm/home/aggiornamenti-e-archivi/tutti-avvisi/content/rss/MA1-1951_p72601</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze giuridiche &quot;Cesare Beccaria&quot;</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.beccaria.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p385401</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze per gli Alimenti la Nutrizione, l&apos;Ambiente</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.defens.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p75901</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze Sociali e Politiche</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.sps.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p28401</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze veterinarie e sanità pubblica</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.divet.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p251801</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Scienze veterinarie per la salute, la produzione animale e la sicurezza alimentare - VESPA</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.vespa.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p256101</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Studi Internazionali, Giuridici e Storico-Politici</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.intgiurpol.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p79201</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Studi letterari, filologici e linguistici</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.studilefili.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p56101</string>
+	</dict>
+	<dict>
+		<key>NAME</key>
+		<string>Studi storici</string>
+		<key>TYPE</key>
+		<integer>1</integer>
+		<key>URL</key>
+		<string>http://www.studistorici.unimi.it/ecm/home/content/rss/UNIMIDIRE-1_p410001</string>
+	</dict>
+</array>
+</plist>
