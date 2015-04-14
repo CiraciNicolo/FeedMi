@@ -8,7 +8,6 @@
 
 #import "Feed.h"
 
-
 @implementation Feed
 
 @dynamic name;

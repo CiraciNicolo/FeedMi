@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-
 @interface Feed : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * type;
-@property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) NSNumber * enabled;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSNumber *type;
+@property (nonatomic, retain) NSString *url;
+@property (nonatomic, retain) NSNumber *enabled;
 
 @end

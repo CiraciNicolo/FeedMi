@@ -75,6 +75,9 @@
 -(void)share:(id)sender {
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL URLWithString:_feed[@"link"]]] applicationActivities:nil];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        activityViewController.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+    }
     [self.navigationController presentViewController:activityViewController animated:YES completion:nil];
 }
 
