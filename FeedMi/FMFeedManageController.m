@@ -13,7 +13,7 @@
 
 @interface FMFeedManageController ()
 
-@property (nonatomic, strong) UIBarButtonItem *left;
+@property (nonatomic, strong) UIBarButtonItem *end;
 @property (nonatomic, strong) NSMutableArray *filtered;
 @property (nonatomic) BOOL isSearching;
 
@@ -26,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         
-        _left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(feedsSelected)];
+        _end = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(feedsSelected)];
         
         _feeds = [NSMutableArray new];
         _filtered = [NSMutableArray new];
@@ -40,7 +40,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    [self.navigationItem setLeftBarButtonItem:_left];
+    [self.navigationItem setRightBarButtonItem:_end];
     self.title = @"Gestisci";
 }
 

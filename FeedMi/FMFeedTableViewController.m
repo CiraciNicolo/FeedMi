@@ -9,6 +9,7 @@
 #import "FMFeedTableViewController.h"
 #import "NCFeedCell.h"
 #import "Feed.h"
+#import "FMFeedViewController.h"
 #import "NSString+NCString.h"
 
 @interface FMFeedTableViewController ()
@@ -20,6 +21,7 @@
 @property (nonatomic, strong) UILabel *errorLabel;
 @property (nonatomic) BOOL canParseItem;
 @property (nonatomic, strong) NSString *lastItem;
+@property (nonatomic, strong) UIActivityIndicatorView *loading;
 
 @end
 
@@ -39,6 +41,9 @@
         [_errorLabel setTextColor:[UIColor colorWithWhite:0.4 alpha:1]];
         [_errorLabel setHidden:YES];
         
+        _loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [_loading startAnimating];
+        
         [self.tableView registerClass:[NCFeedCell class] forCellReuseIdentifier:@"Cell"];
         [self.tableView addSubview:_errorLabel];
         
@@ -50,6 +55,7 @@
  
     self.title = _feed.name;
     [_errorLabel setFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), CGRectGetHeight(self.tableView.frame))];
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:_loading]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -88,6 +94,7 @@
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     
+    [_loading stopAnimating];
     [_errorLabel setText:[error localizedFailureReason]];
     [_errorLabel setHidden:NO];
 }
@@ -132,7 +139,7 @@
     if (_canParseItem && ([_lastItem isEqualToString:@"title"] || [_lastItem isEqualToString:@"description"]) && [_feeds count] > 0) {
         
         NSString *totalString = [[[_feeds lastObject] objectForKey:_lastItem] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-            totalString = [totalString stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n" options:NSCaseInsensitiveSearch range:NSMakeRange(0, totalString.length)];
+            totalString = [[[totalString stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n" options:NSCaseInsensitiveSearch range:NSMakeRange(0, totalString.length)] stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "] stringByStrippingHTML];
         [[_feeds lastObject] setObject:totalString forKey:_lastItem];
         
     }
@@ -157,12 +164,14 @@
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
     
+    [_loading stopAnimating];
     [_errorLabel setText:@"Si è verificato un errore."];
     [_errorLabel setHidden:NO];
 }
 
 -(void)parserDidEndDocument:(NSXMLParser *)parser {
     
+    [_loading stopAnimating];
     [self.tableView reloadData];
 }
 
@@ -182,10 +191,10 @@
 
     NSDictionary *feed = [_feeds objectAtIndex:indexPath.row];
     
-    CGRect titleRect = [feed[@"title"] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]} context:nil];
-    CGRect descriptionRect = [feed[@"description"] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width, 120) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:12]} context:nil];
+    CGRect titleRect = [feed[@"title"] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]} context:nil];
+    CGRect descriptionRect = [[feed[@"description"] stringByStrippingHTML] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, 120) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:12]} context:nil];
     
-    return CGRectGetHeight(titleRect) + CGRectGetHeight(descriptionRect) + 10;
+    return CGRectGetHeight(titleRect) + CGRectGetHeight(descriptionRect) + 35;
 }
 
 - (NCFeedCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -204,7 +213,7 @@
     
     NSDictionary *feed = [_feeds objectAtIndex:indexPath.row];
     [cell.titleLabel setText:feed[@"title"]];
-    [cell.descriptionLabel setText:[feed[@"description"] stringByStrippingHTML]];
+    [cell.descriptionLabel setText:feed[@"description"]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -216,6 +225,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+    FMFeedViewController *feedController = [[FMFeedViewController alloc] initWithFeed:[_feeds objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:feedController animated:true];
 }
 
 @end

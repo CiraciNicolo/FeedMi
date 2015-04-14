@@ -17,7 +17,7 @@
 @interface FMSelectionFeedController ()
 
 @property (nonatomic, strong) NSMutableArray *enabledFeeds;
-@property (nonatomic, strong) UIBarButtonItem *left;
+@property (nonatomic, strong) UIBarButtonItem *manage;
 
 @end
 
@@ -29,7 +29,7 @@
     if (self) {
         
         _enabledFeeds = [NSMutableArray new];
-        _left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(manageFeeds)];
+        _manage = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(manageFeeds)];
     }
     return self;
 }
@@ -37,8 +37,8 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     self.title = @"FeedMi";
-    [self.navigationItem setLeftBarButtonItem:_left];
-    self.navigationItem.title = @"";
+    [self.navigationItem setRightBarButtonItem:_manage];
+//    self.navigationItem.title = @"";
     
     _enabledFeeds = [[[NCAppDelegate sharedDelegate] allEndabledFeeds] mutableCopy];
     [self.tableView reloadData];

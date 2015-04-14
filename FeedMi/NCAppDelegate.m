@@ -36,6 +36,7 @@
     
     _feedController = [[FMSelectionFeedController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_feedController];
+    nav.navigationBar.translucent = false;
     [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
     
