@@ -7,6 +7,7 @@
 //
 
 #import "FMFeedViewController.h"
+#import "NCSafariAction.h"
 
 @interface FMFeedViewController ()
 
@@ -74,7 +75,9 @@
 
 -(void)share:(id)sender {
     
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL URLWithString:_feed[@"link"]]] applicationActivities:nil];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[[NSURL URLWithString:_feed[@"link"]]] applicationActivities:@[[[NCSafariAction alloc] init]]];
+    
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         activityViewController.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
     }

@@ -33,7 +33,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self apperance];
-    
+        
     _feedController = [[FMSelectionFeedController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_feedController];
     nav.navigationBar.translucent = false;

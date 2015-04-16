@@ -34,6 +34,8 @@
 		F6B4E7CA18D7214D000622BC /* FMSelectionFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B4E7C918D7214D000622BC /* FMSelectionFeedController.m */; };
 		F6B4E7CD18D723E2000622BC /* FMFeedManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B4E7CC18D723E2000622BC /* FMFeedManageController.m */; };
 		F6D3F9341ADD328900AA13C5 /* FMFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D3F9331ADD328900AA13C5 /* FMFeedViewController.m */; };
+		F6F22A2A1ADFC7080040A285 /* NCSafariAction.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F6F22A291ADFC7080040A285 /* NCSafariAction.bundle */; };
+		F6F22A2D1ADFC7330040A285 /* NCSafariAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F22A2C1ADFC7330040A285 /* NCSafariAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,9 @@
 		F6B4E7D018D72AC0000622BC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F6D3F9321ADD328900AA13C5 /* FMFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFeedViewController.h; sourceTree = "<group>"; };
 		F6D3F9331ADD328900AA13C5 /* FMFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFeedViewController.m; sourceTree = "<group>"; };
+		F6F22A291ADFC7080040A285 /* NCSafariAction.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NCSafariAction.bundle; sourceTree = "<group>"; };
+		F6F22A2B1ADFC7330040A285 /* NCSafariAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSafariAction.h; sourceTree = "<group>"; };
+		F6F22A2C1ADFC7330040A285 /* NCSafariAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSafariAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +200,7 @@
 		F6A260A31AD2930F00EB0025 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6F22A291ADFC7080040A285 /* NCSafariAction.bundle */,
 				F626BD4818D316CD00294082 /* Images.xcassets */,
 				F620024418D34DEC00DA2960 /* FEED_RSS.plist */,
 			);
@@ -223,6 +229,8 @@
 				F67FCE6D1AD977D300079F10 /* UIColor+NCColor.m */,
 				F67FCE6F1AD9808100079F10 /* NSString+NCString.h */,
 				F67FCE701AD9808100079F10 /* NSString+NCString.m */,
+				F6F22A2B1ADFC7330040A285 /* NCSafariAction.h */,
+				F6F22A2C1ADFC7330040A285 /* NCSafariAction.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -336,6 +344,7 @@
 			files = (
 				F620024518D34DEC00DA2960 /* FEED_RSS.plist in Resources */,
 				F626BD3E18D316CD00294082 /* InfoPlist.strings in Resources */,
+				F6F22A2A1ADFC7080040A285 /* NCSafariAction.bundle in Resources */,
 				F626BD4918D316CD00294082 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +374,7 @@
 				F626BD4718D316CD00294082 /* FeedMi.xcdatamodeld in Sources */,
 				F63C60F718D7030D00827286 /* CGRect+Utils.m in Sources */,
 				F6B4BB0118D705A90037C829 /* Feed.m in Sources */,
+				F6F22A2D1ADFC7330040A285 /* NCSafariAction.m in Sources */,
 				F6B4E7CA18D7214D000622BC /* FMSelectionFeedController.m in Sources */,
 				F620024318D3436900DA2960 /* FMWelcomeViewController.m in Sources */,
 				F639E31F18D752D100B9B31C /* NCFeedCell.m in Sources */,
