@@ -1,6 +1,5 @@
 //
 //  NCSafariAction.m
-//  FeedMi
 //
 //  Created by Nicolò Ciraci on 16/04/15.
 //  Copyright (c) 2015 Nicolò Ciraci. All rights reserved.
@@ -28,7 +27,8 @@
 
 - (NSString *)activityTitle {
     
-    return @"Apri in Safari";
+    NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:NSStringFromClass([self class]) withExtension:@"bundle"]];
+    return NSLocalizedStringFromTableInBundle(@"Open in Safari", NSStringFromClass([self class]), bundle, nil);
 }
 
 - (UIImage *)activityImage {
