@@ -31,10 +31,11 @@
     [[[[NCAppDelegate sharedDelegate] allFeeds] mutableCopy] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
         Feed *feed = (Feed*)obj;
-        [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:feed.url]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-            
-            XCTAssertNotEqual([(NSHTTPURLResponse *)response statusCode], 200, @"Page at URL: %@ not found", response.URL.absoluteString);
-        }];
+        NSURLResponse *response;
+        NSError *error;
+        
+        [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:feed.url]] returningResponse:&response error:&error];
+        XCTAssertNotEqual([response MIMEType], @"application/rss+xml", @"Page at URL: %@ is not an RSS feed.", response.URL.absoluteString);
     }];
 }
 
