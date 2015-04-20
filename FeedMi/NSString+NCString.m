@@ -21,4 +21,11 @@
     return string;
 }
 
+-(NSString*)stringByRemovingHTMLSpecialCharacters {
+    
+    // "Nifty" trick
+    return [[[NSAttributedString alloc] initWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+          NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)} documentAttributes:nil error:nil] string];
+}
+
 @end

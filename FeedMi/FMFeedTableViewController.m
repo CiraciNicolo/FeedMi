@@ -97,6 +97,7 @@
     [_loading stopAnimating];
     [_errorLabel setText:[error localizedFailureReason]];
     [_errorLabel setHidden:NO];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -139,7 +140,10 @@
     if (_canParseItem && ([_lastItem isEqualToString:@"title"] || [_lastItem isEqualToString:@"description"]) && [_feeds count] > 0) {
         
         NSString *totalString = [[[_feeds lastObject] objectForKey:_lastItem] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-            totalString = [[[totalString stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n" options:NSCaseInsensitiveSearch range:NSMakeRange(0, totalString.length)] stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "] stringByStrippingHTML];
+        totalString = [totalString stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n" options:NSCaseInsensitiveSearch range:NSMakeRange(0, totalString.length)];
+        totalString = [totalString stringByStrippingHTML];
+        totalString = [totalString stringByRemovingHTMLSpecialCharacters];
+        
         [[_feeds lastObject] setObject:totalString forKey:_lastItem];
         
     }
@@ -147,19 +151,11 @@
 
 -(NSDate *)dateFromString:(NSString*)string {
     
-    NSError *error = NULL;
-    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:(NSTextCheckingTypes)NSTextCheckingTypeDate error:&error];
-    
+    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:(NSTextCheckingTypes)NSTextCheckingTypeDate error:nil];
     NSArray *matches = [detector matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+    NSArray *filtered = [matches filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"resultType = %"PRIu64, NSTextCheckingTypeDate]];
     
-    for (NSTextCheckingResult *match in matches) {
-        if ([match resultType] == NSTextCheckingTypeDate) {
-            
-            return [match date];
-        }
-    }
-    
-    return nil;
+    return [filtered count] ? [[filtered firstObject] date] : nil;
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
@@ -167,6 +163,7 @@
     [_loading stopAnimating];
     [_errorLabel setText:@"Si è verificato un errore."];
     [_errorLabel setHidden:NO];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 -(void)parserDidEndDocument:(NSXMLParser *)parser {
@@ -192,7 +189,12 @@
     NSDictionary *feed = [_feeds objectAtIndex:indexPath.row];
     
     CGRect titleRect = [feed[@"title"] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]} context:nil];
-    CGRect descriptionRect = [[feed[@"description"] stringByStrippingHTML] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, 120) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:12]} context:nil];
+    CGRect descriptionRect = [[feed[@"description"] stringByStrippingHTML] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:12]} context:nil];
+    
+    if ([[feed[@"description"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
+        
+        return CGRectGetHeight(titleRect);
+    }
     
     return CGRectGetHeight(titleRect) + CGRectGetHeight(descriptionRect) + 35;
 }

@@ -11,5 +11,6 @@
 @interface NSString (NCString)
 
 -(NSString *)stringByStrippingHTML;
+-(NSString*)stringByRemovingHTMLSpecialCharacters;
 
 @end
