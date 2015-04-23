@@ -97,7 +97,7 @@
     [_loading stopAnimating];
     [_errorLabel setText:[error localizedFailureReason]];
     [_errorLabel setHidden:NO];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+	[self.tableView setSeparatorColor:[UIColor clearColor]];
 }
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -163,7 +163,7 @@
     [_loading stopAnimating];
     [_errorLabel setText:@"Si è verificato un errore."];
     [_errorLabel setHidden:NO];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+	[self.tableView setSeparatorColor:[UIColor clearColor]];
 }
 
 -(void)parserDidEndDocument:(NSXMLParser *)parser {
@@ -186,17 +186,17 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSDictionary *feed = [_feeds objectAtIndex:indexPath.row];
+	NSDictionary *feed = [_feeds objectAtIndex:indexPath.row];
     
-    CGRect titleRect = [feed[@"title"] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]} context:nil];
-    CGRect descriptionRect = [[feed[@"description"] stringByStrippingHTML] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:12]} context:nil];
-    
-    if ([[feed[@"description"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
-        
-        return CGRectGetHeight(titleRect);
+    if ([[feed[@"description"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] != 0) {
+		
+		CGRect titleRect = [feed[@"title"] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14]} context:nil];
+		CGRect descriptionRect = [[feed[@"description"] stringByStrippingHTML] boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width - 20, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:12]} context:nil];
+		
+		return CGRectGetHeight(titleRect) + CGRectGetHeight(descriptionRect) + 10;
     }
     
-    return CGRectGetHeight(titleRect) + CGRectGetHeight(descriptionRect) + 35;
+	return 40;
 }
 
 - (NCFeedCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

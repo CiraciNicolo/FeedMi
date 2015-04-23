@@ -19,9 +19,10 @@
         [_titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:14]];
         [_titleLabel setNumberOfLines:0];
         
-        _descriptionLabel = [[UILabel alloc] init];
+        _descriptionLabel = [[NCLabel alloc] init];
+		[_descriptionLabel setVerticalAlignment:UIControlContentVerticalAlignmentTop];
         [_descriptionLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:12]];
-        [_descriptionLabel setNumberOfLines:10];
+        [_descriptionLabel setNumberOfLines:0];
         [_descriptionLabel setLineBreakMode:NSLineBreakByTruncatingTail];
         
         _dateLabel = [[UILabel alloc] init];

@@ -30,6 +30,7 @@
 		F63C60F718D7030D00827286 /* CGRect+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C60F618D7030D00827286 /* CGRect+Utils.m */; };
 		F6485E941AE0F3DE007EFB95 /* NCSafariAction.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F6485E911AE0F3DE007EFB95 /* NCSafariAction.bundle */; };
 		F6485E951AE0F3DE007EFB95 /* NCSafariAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F6485E931AE0F3DE007EFB95 /* NCSafariAction.m */; };
+		F67B57511AE8F95B0097944C /* NCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F67B57501AE8F95B0097944C /* NCLabel.m */; };
 		F67FCE6E1AD977D300079F10 /* UIColor+NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F67FCE6D1AD977D300079F10 /* UIColor+NCColor.m */; };
 		F67FCE711AD9808100079F10 /* NSString+NCString.m in Sources */ = {isa = PBXBuildFile; fileRef = F67FCE701AD9808100079F10 /* NSString+NCString.m */; };
 		F6B4BB0118D705A90037C829 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B4BB0018D705A90037C829 /* Feed.m */; };
@@ -79,6 +80,8 @@
 		F6485E911AE0F3DE007EFB95 /* NCSafariAction.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NCSafariAction.bundle; sourceTree = "<group>"; };
 		F6485E921AE0F3DE007EFB95 /* NCSafariAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSafariAction.h; sourceTree = "<group>"; };
 		F6485E931AE0F3DE007EFB95 /* NCSafariAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSafariAction.m; sourceTree = "<group>"; };
+		F67B574F1AE8F95B0097944C /* NCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLabel.h; sourceTree = "<group>"; };
+		F67B57501AE8F95B0097944C /* NCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLabel.m; sourceTree = "<group>"; };
 		F67FCE6C1AD977D300079F10 /* UIColor+NCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NCColor.h"; sourceTree = "<group>"; };
 		F67FCE6D1AD977D300079F10 /* UIColor+NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NCColor.m"; sourceTree = "<group>"; };
 		F67FCE6F1AD9808100079F10 /* NSString+NCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NCString.h"; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 		F6E59B721AD2AC8600433358 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F67B574F1AE8F95B0097944C /* NCLabel.h */,
+				F67B57501AE8F95B0097944C /* NCLabel.m */,
 				F639E31D18D752D100B9B31C /* NCFeedCell.h */,
 				F639E31E18D752D100B9B31C /* NCFeedCell.m */,
 			);
@@ -378,6 +383,7 @@
 				F626BD4018D316CD00294082 /* main.m in Sources */,
 				F6B4E7CD18D723E2000622BC /* FMFeedManageController.m in Sources */,
 				F620023D18D33AB000DA2960 /* NCUserDefault.m in Sources */,
+				F67B57511AE8F95B0097944C /* NCLabel.m in Sources */,
 				F6D3F9341ADD328900AA13C5 /* FMFeedViewController.m in Sources */,
 				F620024018D33DEE00DA2960 /* FMFeedTableViewController.m in Sources */,
 				F626BD4718D316CD00294082 /* FeedMi.xcdatamodeld in Sources */,
@@ -504,11 +510,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nicolo Ciraci (Q995NEW5TS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedMi/FeedMi-Prefix.pch";
 				INFOPLIST_FILE = "FeedMi/FeedMi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,11 +528,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nicolo Ciraci (Q995NEW5TS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedMi/FeedMi-Prefix.pch";
 				INFOPLIST_FILE = "FeedMi/FeedMi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

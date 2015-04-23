@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NCLabel.h"
 
 @interface NCFeedCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UILabel *descriptionLabel;
+@property (nonatomic, strong) NCLabel *descriptionLabel;
 @property (nonatomic, strong) UILabel *dateLabel;
 
 @end
