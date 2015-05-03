@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09C3BA6C-DA87-48FE-AAB0-381A17DE6B99</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FeedMi</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21DF11DB1BE9FD0EE8BED46D5E7047A27B02D60F</key>
+		<string>https://github.com/iStopped/FeedMi.git</string>
+		<key>C05B0851ED900FE83987CF7721CBA5473EAE97D8</key>
+		<string>https://github.com/iStopped/NCSafariAction.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FeedMi.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21DF11DB1BE9FD0EE8BED46D5E7047A27B02D60F</key>
+		<string>../..</string>
+		<key>C05B0851ED900FE83987CF7721CBA5473EAE97D8</key>
+		<string>../../../NCSafariActionDemo</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iStopped/FeedMi.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21DF11DB1BE9FD0EE8BED46D5E7047A27B02D60F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21DF11DB1BE9FD0EE8BED46D5E7047A27B02D60F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FeedMi</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C05B0851ED900FE83987CF7721CBA5473EAE97D8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NCSafariActionDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
